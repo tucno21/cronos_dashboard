@@ -1,0 +1,21 @@
+https://www.npmjs.com/package/concurrently
+npm i concurrently
+
+https://www.npmjs.com/package/http-server
+npm i http-server
+
+https://www.npmjs.com/package/live-server
+npm i live-server
+
+"scripts": {
+		"dev": "concurrently \"npx tailwindcss -i ./src/input.css -o ./public/assets/tailwindcss.css --watch\" \"http-server ./public\""
+	},
+
+con otro puerto
+"scripts": {
+    "dev": "concurrently \"npx tailwindcss -i ./src/input.css -o ./public/assets/tailwindcss.css --watch\" \"http-server ./public -p 3000\""
+}
+
+"scripts": {
+		"dev": "concurrently \"npx tailwindcss -i ./src/input.css -o ./public/assets/tailwindcss.css --watch\" \"http-server ./public\""
+	},

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>dashboard</title>
+		<link href="./assets/dashboard.css" rel="stylesheet" />
+	</head>
+	<body class="h-screen flex">
+		<!-- SIDEBAR -->
+		<div class="sidebar sm:left-0 -left-[14rem] bg-slate-900" id="sidebar">
+			<div class="sidebar-logo">
+				<h1 class="text-white font-black" id="titleLogo">LOGO</h1>
+			</div>
+			<div class="px-4 space-y-2">
+				<!-- menu simple -->
+				<a href="/" class="singleMenu active-link">
+					<i class="bi bi-graph-up-arrow"></i>
+					<h2>Dashboard</h2>
+				</a>
+				<!-- USERS -->
+				<div class="relative menudespeglables">
+					<div class="dropdownMenu">
+						<div class="relative flex space-x-2 items-center active-link">
+							<i class="bi bi-bar-chart-steps"></i>
+							<h2>Basico</h2>
+						</div>
+						<i class="bi bi-chevron-down"></i>
+					</div>
+					<!-- Dropdown content -->
+					<div class="dropdown-content hidden">
+						<a href="./inputs.html" class="dropdown-link">Inputs</a>
+						<a href="./botones.html" class="dropdown-link">Botones</a>
+						<a href="./badges.html" class="dropdown-link">Badges</a>
+						<a href="./toast.html" class="dropdown-link">Toast</a>
+						<a href="./alert.html" class="dropdown-link">Alert</a>
+					</div>
+				</div>
+				<!-- POST -->
+				<a href="/modal.html" class="singleMenu active-link">
+					<i class="bi bi-bounding-box-circles"></i>
+					<h2>Modal</h2>
+				</a>
+				<!-- POST -->
+				<a href="/table.html" class="singleMenu active-link">
+					<i class="bi bi-database"></i>
+					<h2>Datatable</h2>
+				</a>
+				<!-- PRODUCTOS -->
+				<div class="relative menudespeglables">
+					<div class="dropdownMenu">
+						<div class="relative flex space-x-2 items-center active-link">
+							<i class="bi bi-bricks"></i>
+							<h2>Otros</h2>
+						</div>
+						<i class="bi bi-chevron-down"></i>
+					</div>
+					<!-- Dropdown content -->
+					<div class="dropdown-content hidden">
+						<a href="#" class="dropdown-link">Opción a</a>
+						<a href="#" class="dropdown-link">Opción b</a>
+						<a href="#" class="dropdown-link">Opción c</a>
+						<a href="#" class="dropdown-link">Opción d</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- LATERAL -->
+		<div class="flex-1">
+			<!-- TOP MENU -->
+			<div class="top-menu bg-gray-900">
+				<!-- MENU ICON HAMBURGUESA MOVIL -->
+				<div class="pl-4 sm:hidden">
+					<button class="top-menu-movil" id="sidebarToggleMovil">
+						<i class="bi bi-three-dots-vertical"></i>
+						<i class="bi bi-x-lg hidden"></i>
+					</button>
+				</div>
+				<!-- MENU ICON HAMBURGUESA LAPTOP -->
+				<div class="pl-4" id="menulaptop">
+					<i class="bi bi-box-arrow-left top-menu-laptop"></i>
+				</div>
+				<!-- MENU DERECHO USER -->
+				<div class="flex items-center pr-4 md:pr-8">
+					<div class="relative">
+						<!-- boton user -->
+						<div class="flex space-x-2 cursor-pointer" id="botonuser">
+							<i class="bi bi-person-circle text-white text-xl"></i>
+							<span class="hidden md:block font-medium text-gray-400">Carlos</span>
+							<i class="bi bi-chevron-down h-4 w-4 text-gray-400"></i>
+						</div>
+						<!-- dropdown user -->
+						<div id="dropdownuser" class="top-menu-dropdown hidden">
+							<a href="#" class="top-menu-dropdown-link">
+								<i class="bi bi-gear-wide mr-2"></i>
+								Configuración
+							</a>
+							<a href="#" class="top-menu-dropdown-link">
+								<i class="bi bi-key mr-2"></i>
+								Cambiar contraseña
+							</a>
+							<a href="#" class="top-menu-dropdown-link">
+								<i class="bi bi-box-arrow-right mr-2"></i>
+								Cerrar sesión
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- CONTENT -->
+			<div class="bg-[#F7F7F7] overflow-fix h-[calc(100vh-3rem)]">
+				<div class="space-y-2 mx-auto">
+					<!-- cabecera -->
+					<div class="flex justify-between items-center bg-white py-2 px-3 border-b border-gray-200">
+						<h1 class="text-xl font-bold">Botones</h1>
+						<!-- boton -->
+						<div class="">
+							<button class="btn-sm btn-primary">abrir</button>
+							<button class="btn-sm btn-danger">eliminar</button>
+						</div>
+					</div>
+
+					<!-- cuerpo -->
+					<div class="p-2 lg:p-4">
+						<div class="bg-white p-3 mb-3 shadow">
+							<button class="btn btn-indigo">Indigo</button>
+							<button class="btn btn-primary">primary</button>
+							<button class="btn btn-success">success</button>
+							<button class="btn btn-danger">danger</button>
+							<button class="btn btn-warning">warning</button>
+							<button class="btn btn-info">info</button>
+							<button class="btn btn-light">light</button>
+							<button class="btn btn-dark">dark</button>
+						</div>
+						<div class="bg-white p-3 mt-3 shadow">
+							<button class="btn btn-outline-primary">primary</button>
+							<button class="btn btn-outline-warning">warning</button>
+							<button class="btn btn-outline-danger">danger</button>
+							<button class="btn btn-outline-success">success</button>
+						</div>
+
+						<div class="bg-white p-3 mt-3 shadow">
+							<button class="btn-sm btn-indigo">btn pequeño</button>
+							<button class="btn btn-indigo">btn normal</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END CONTENT -->
+		</div>
+
+		<script src="./assets/index.js"></script>
+	</body>
+</html>
