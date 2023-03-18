@@ -732,8 +732,14 @@ class DataTable {
 	}
 
 	init() {
-		this.renderHeader();
-		this.renderTable();
+		if (!this.container.querySelector(".datatable-header")) {
+			this.renderHeader();
+		}
+
+		if (!this.container.querySelector(".datatable-table")) {
+			this.renderTable();
+		}
+
 		this.render();
 	}
 
@@ -947,6 +953,7 @@ class DataTable {
 			return this.data;
 		} else {
 			const lowerCaseSearchTerm = this.searchTerm.toLowerCase();
+			console.log(this.data);
 			return this.data.filter((row) =>
 				Object.values(row).some(
 					(value) => value.toString().toLowerCase().indexOf(lowerCaseSearchTerm) !== -1

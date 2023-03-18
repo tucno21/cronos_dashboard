@@ -83,13 +83,13 @@
 		@apply text-[#39afd1] border border-[#39afd1] hover:bg-[#39afd1] hover:text-white focus:outline-none;
 	}
 	.modal-init {
-		@apply fixed w-full h-full top-0 left-0 flex items-center justify-center z-40;
+		@apply fixed w-full h-full top-0 left-0 flex items-center justify-center z-30;
 	}
 	.modal-overlay {
 		@apply absolute w-full h-full bg-gray-700 opacity-90;
 	}
 	.modal-content {
-		@apply bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto;
+		@apply bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-40 overflow-y-auto max-h-[90vh];
 	}
 	.form-label {
 		@apply block mb-1 text-sm font-medium text-gray-900;
