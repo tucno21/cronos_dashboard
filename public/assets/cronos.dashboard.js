@@ -213,19 +213,21 @@ const path = window.location.pathname;
 const activeLink = document.querySelector(`a[href=".${path}"], a[href="${path}"]`);
 
 function removeActiveClass() {
-	const menudespeglables = activeLink.closest(".menudespeglables");
-	if (menudespeglables) {
-		const parentElement = activeLink.parentElement;
-		const parentSibling = parentElement.previousElementSibling;
-		parentSibling.classList.add("bg-gray-800");
-		parentSibling.classList.add("text-white");
-		parentElement.classList.toggle("hidden", !full);
-		parentElement.classList.toggle("border-l", full);
-		activeLink.classList.toggle("text-gray-200", full);
-		activeLink.classList.toggle("font-bold", full);
-	} else {
-		activeLink.classList.add("bg-gray-800");
-		activeLink.classList.add("text-white");
+	if (activeLink) {
+		const menudespeglables = activeLink.closest(".menudespeglables");
+		if (menudespeglables) {
+			const parentElement = activeLink.parentElement;
+			const parentSibling = parentElement.previousElementSibling;
+			parentSibling.classList.add("bg-gray-800");
+			parentSibling.classList.add("text-white");
+			parentElement.classList.toggle("hidden", !full);
+			parentElement.classList.toggle("border-l", full);
+			activeLink.classList.toggle("text-gray-200", full);
+			activeLink.classList.toggle("font-bold", full);
+		} else {
+			activeLink.classList.add("bg-gray-800");
+			activeLink.classList.add("text-white");
+		}
 	}
 }
 
